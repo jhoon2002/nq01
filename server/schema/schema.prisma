@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Examinee {
+    id          String  @id
+    type        String
+    unit        String
+    school      String
+    department  String
+    major       String
+    name        String
+    jumin       String
+    phone       String
+    cellphone   String
+    email       String
+    high_school         String
+    high_school_code    String
+    graduation_day  String
+    graduation_state    String
+    neis_agree  String
+    recepted    DateTime
+}
